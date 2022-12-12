@@ -18,7 +18,7 @@
 .para {
     position:absolute;
     color: #cccd;
-    font-size:6.5vw;
+    font-size:4.5vh;
     height:75vh;
     width:86vw;
     top:15vh;
@@ -42,9 +42,15 @@
 }
     </style>
     <body style="font-family:Dalius;" id="body">
+        <audio controls style=" display:none;" loop   id="a"  >
+            <source src="https://dl.dropbox.com/s/9iuxb2nqkfzryfu/DJ_BoBo_Happy_Birthday.mp3?dl=0">
         <canvas id="canvas" style="font-family:Sacramento">
         </canvas>
         <script>
+            window.addEventListener("mouseover",play);
+window.addEventListener("click",play);
+function play() { document.getElementById("a").play();
+}
 swal({
   title: "Happy Birthday 🎉🥳🎉",
   text: "Smile Please 😊😄",
@@ -79,7 +85,7 @@ var a = setInterval(function go() {
   draw.style.position = "absolute";
   draw.style.transform = "rotate(" + deg + "deg)";
   document.body.appendChild(draw);
-  },150)
+  },150)
   typeWriter();
  {button:"yes"}
 })
